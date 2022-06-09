@@ -6,6 +6,7 @@ const display = document.querySelector('.display');
 const displayContainer = document.querySelector('.calculator-display');
 const historyWrapper = document.querySelector('.note .history ul');
 let history = [];
+let clear = false;
 
 
 const resizeToFit = () => {
@@ -99,6 +100,8 @@ const solveExpression = () => {
             printHistory(history);
         }
 
+        clear = true;
+
     } catch(e) {
         display.value = 'Error';
     }
@@ -135,6 +138,11 @@ const invertSign = () => {
 }
 
 const addToExpression = (buttonValue) => {
+    if( clear ){
+        clearDisplay();
+        clear = false;
+    }
+
     if( display.value.length + 1 > MAX_CARACTERS ){
         display.value = 'Overflow';
         return;
