@@ -1,4 +1,4 @@
-const EMPTY = ['0', 'Error', 'Overflow', 'Infinity'];
+const EMPTY = ['0', 'Error', 'Overflow'];
 const SIGNS = ['+', '-', '*', '/', '%'];
 const MAX_CARACTERS = 30;
 const eraser = document.querySelector('.eraser');
@@ -91,14 +91,14 @@ const solveExpression = () => {
         expression = verifyParanthesis(expression);
         const result = eval(expression);
 
-        history.push(expression + ' = ' + result);
-        printHistory(history);
-
-        if( isNaN(result) ){
+        if( isNaN(result) || result === Infinity || result === -Infinity ){
             display.value = 'Error';
         } else {
             display.value = result;
+            history.push(expression + ' = ' + result);
+            printHistory(history);
         }
+
     } catch(e) {
         display.value = 'Error';
     }
