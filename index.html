@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora tarefa autoria e design para a internet">
+    <meta name="author" content="Diógenes Dietrich">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="desk-wrapper">
+        <div class="calculator-wrapper">
+            <div class="calculator-display">
+                <input disabled value="0" class="display" pattern="[+-]?([0-9]*[.])?[0-9]+" autocomplete="off" required="required" type="text">
+            </div>
+            <div class="calculator-line">
+                <input type="button" class="calculator-button orange" value="C">
+                <input type="button" class="calculator-button orange" value="+/-">
+                <a href="https://fit.faccat.br" target="_blank"><input type="button" class="calculator-button faccat white" value=""></a>
+                <input type="button" class="calculator-button blue" value="÷">
+            </div>
+            <div class="calculator-line">
+                <input type="button" class="calculator-button" value="7">
+                <input type="button" class="calculator-button" value="8">
+                <input type="button" class="calculator-button" value="9">
+                <input type="button" class="calculator-button blue" value="x">
+            </div>
+            <div class="calculator-line">
+                <input type="button" class="calculator-button" value="4">
+                <input type="button" class="calculator-button" value="5">
+                <input type="button" class="calculator-button" value="6">
+                <input type="button" class="calculator-button blue" value="-">
+            </div>
+            <div class="calculator-line">
+                <input type="button" class="calculator-button" value="1">
+                <input type="button" class="calculator-button" value="2">
+                <input type="button" class="calculator-button" value="3">
+                <input type="button" class="calculator-button blue" value="+">
+            </div>
+            <div class="calculator-line">
+                <input type="button" class="calculator-button" value="0">
+                <input type="button" class="calculator-button" value="00">
+                <input type="button" class="calculator-button" value=".">
+                <input type="button" class="calculator-button green" value="=">
+            </div>
+        </div>
+        <div class="note">
+            <div class="history">
+                <ul></ul>
+            </div>
+            <div class="eraser"></div>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
